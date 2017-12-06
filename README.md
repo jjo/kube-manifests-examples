@@ -1,10 +1,10 @@
-= Random jjo's kubernetes manifests
+# Random jjo's kubernetes manifests
 
 All/most examples use `kube.libsonnet` from
 https://github.com/kubeapps/manifest
 
 
-== Hashed ConfigMap example
+## Hashed ConfigMap example
 
 As `ConfigMap` changes won't trigger objects using
 it (typically a `Deployment`), forcing the `ConfigMap`
@@ -17,6 +17,7 @@ key as a file there):
     manifests/bb-hashed.common.libsonnet
     manifests/bb-hashed.v2.jsonnet
     manifests/bb-hashed.v1.jsonnet
+
 
 * See configs difference: `diff -u manifests/bb-hashed.v?.jsonnet`
 * From `make dry-run` output, you can see how the `ConfigMap` name has
